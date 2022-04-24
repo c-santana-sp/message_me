@@ -7,16 +7,7 @@
 		<div class="ui fluid raised card chatbox">
 			<div class="ui content">
 				<div class="ui small feed">
-
-					<% @messages.each do |message| %>
-						<div class="event">
-							<div class="content">
-								<div class="summary">
-									<em class="ui blue header"><%= message.user.username %>:</em> <span><%= message.body %></span>
-								</div>
-							</div>
-						</div>
-					<% end %>
+					<%= render @messages %>
 				</div>
 			</div>
 
@@ -30,10 +21,8 @@
 					</div>
 				</form>
 			</div>
-
 		</div>
 	</div>
-
 	<div class="ui four wide column">
 		<div class="ui fluid raised card chatbox">
 			<div class="ui content">
